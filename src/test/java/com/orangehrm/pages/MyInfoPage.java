@@ -36,15 +36,12 @@ public class MyInfoPage {
     }
 
     public void openMyInfo() {
-        // wait login completed
-        wait.until(ExpectedConditions.visibilityOfElementLocated(leftMenu));
+    // ✅ Wait until My Info is clickable (means menu is loaded)
+    wait.until(ExpectedConditions.elementToBeClickable(myInfoMenu)).click();
 
-        // click My Info
-        wait.until(ExpectedConditions.elementToBeClickable(myInfoMenu)).click();
-
-        // wait page loaded
-        wait.until(ExpectedConditions.visibilityOfElementLocated(personalDetailsHeader));
-    }
+    // wait page loaded
+    wait.until(ExpectedConditions.visibilityOfElementLocated(personalDetailsHeader));
+}
 
     public boolean isHeaderDisplayed() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(personalDetailsHeader)).isDisplayed();
