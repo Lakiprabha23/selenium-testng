@@ -91,11 +91,7 @@ public class LoginPage {
 
     // For valid login scenario
     public boolean isDashboardVisible() {
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(dashboardHeader));
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+    wait.until(ExpectedConditions.visibilityOfElementLocated(dashboardHeader));
+    return true;
+}
 }
