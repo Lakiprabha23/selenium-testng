@@ -28,7 +28,7 @@ public class LoginTest {
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
         loginPage = new LoginPage(driver);
-        myInfoPage = new MyInfoPage(driver);
+        
     }
 
     @Test
